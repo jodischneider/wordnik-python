@@ -33,7 +33,7 @@ Once you have a client set up, you need to instantiate an API object for whichev
 ```python
 wordApi = WordApi.WordApi(client)
 example = wordApi.getTopExample('irony')
-print example.text
+print(example.text)
 ```
 
 To find out what arguments the method expects, consult the online, interactive documentation at http://developer.wordnik.com/docs , and also check out the method definitions in `wordnik/WordApi.py`.
@@ -48,7 +48,7 @@ definitions = wordApi.getDefinitions('badger',
                                      partOfSpeech='verb',
                                      sourceDictionaries='wiktionary',
                                      limit=1)
-print definitions[0].text
+print(definitions[0].text)
 ```
 
 The variable `definitions` is now an list of instances of the `Definition` class defined in `wordnik/models/Definition.py`, as indicated in the documentation for `getDefinition`.
